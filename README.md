@@ -10,3 +10,4 @@
 * codiga - static code analysis.
 * https://api.codiga.io/project/32096/score/svg
 * https://api.codiga.io/project/32096/status/svg
+* https://api.codiga.io/project/32096/status/svg
