@@ -5,6 +5,16 @@ void Explore();
 void Exchange();
 void Compare();
 void Denomination();
+void A(int *a,int *amount);
+void B(int *b,int *amount);
+void C(int *c,int *amount);
+void D(int *d,int *amount);
+void E(int *e,int *amount);
+void F(int *f,int *amount);
+void G(int *g,int *amount);
+void H(int *h,int *amount);
+void J(int *j,int *amount);
+void K(int *k,int *amount);
 int main()
 {
   int num,n,exit,choice;
@@ -20,6 +30,8 @@ int main()
     "\n4.DENOMINATION CALCULATOR");
   printf("\n\nENTER YOUR CHOICE\n");
   scanf("%d",&choice);
+  while(exit!=1)
+ {
   switch(choice)
   {
   case 1:
@@ -34,7 +46,12 @@ int main()
   case 4:
   Denomination();
   break;
-  }
+ }
+    
+      printf("\n......................");
+      printf("\n\n\t press 1 to exit and 2 to continue (yes=1/no=2):");
+      scanf("%d",&exit);
+      }
 }
 void Explore()
 {
@@ -178,447 +195,213 @@ void Compare()
     void Denomination()
     {
         int amount,country;
-        int note500000=0;
-        int note200000=0;
-        int note100000=0;
-        int note50000=0;
-        int note20000=0;
-        int note10000=0;
-        int note5000=0;
-        int note2000=0;
-        int note1000=0;
-        int note500=0;
-        int note200=0;
-        int note100=0;
-        int note50=0;
-        int note20=0;
-        int note10=0;
-        int note5=0;
-        int note2=0;
-        int note1=0;
-        printf("ENTER AMOUNT:\n");
-        scanf("%d",&amount);
+        int a[20];
+        int b[20];
+        int c[20];
+        int d[20];
+        int e[20];
+        int f[20];
+        int g[20];
+        int h[20];
+        int j[20];
+        int k[20];
+        /*printf("ENTER AMOUNT:\n");
+        scanf("%d",&amount);*/
         printf("ENTER COUNTRY\n");
        printf("1.Dollar\n2.Euro\n3.Yen\n4.Riyal\n5.pound\n6.Tukka\n7.Peso\n8.Rubble\n9.Baht\n10.Dong\n");
         scanf("%d",&country);
         switch(country)
         {
-        case 1:
-       if(amount >= 100)
-       {
-        note100 = amount/100;
-        amount = amount - (note100 * 100);
-       }
-      if(amount >= 50)
-       {
-        note50 = amount/50;
-        amount = amount - (note50 *50);
-       }
-      if(amount >= 20)
-       {
-        note20 = amount/20;
-        amount = amount -(note20*20);
-       }
-      if(amount >= 10)
-      {
-        note10 = amount/10;
-        amount = amount -(note10 *10);
-      }
-      if(amount >=5)
-      {
-        note5 = amount/5;
-        amount = amount -(note5 *5);
-      }
-     if(amount >=2)
-      {
-        note2 = amount/2;
-        amount = amount - (note2 *2);
-      }
-      if(amount >=1)
-     {
-        note1 = amount/1;
-        amount = amount - (note1 *1);
-     } 
-    printf("DENOMINATION IN USA:");
-    printf("100 = %d\n50 = %d\n20 = %d\n10 = %d\n5 =%d\n2 = %d\n1 = %d\n",note100,note50,note20,note10,note5,note2,note1);
-    break;
-        case 2:
-        if(amount >= 500)
-       {
-        note500 = amount/500;
-        amount = amount - (note500 * 500);
-       }
-      if(amount >= 200)
-       {
-        note200 = amount/200;
-        amount = amount - (note200 *200);
-       }
-      if(amount >= 100)
-       {
-        note100 = amount/100;
-        amount = amount -(note100*100);
-       }
-      if(amount >= 50)
-      {
-        note50 = amount /50;
-        amount = amount -(note50 *50);
-      }
-      if(amount >=20)
-      {
-        note20 = amount/20;
-        amount = amount -(note20 *20);
-      }
-     if(amount >=10)
-      {
-        note10 = amount/10;
-        amount = amount - (note10 *10);
-      }
-      if(amount >=5)
-     {
-        note5 = amount/5;
-        amount = amount - (note5 *5);
-     } 
-    printf("DENOMINATIONS IN EURO:\n");
-    printf("500 = %d\n200 = %d\n100 = %d\n50 = %d\n20 = %d\n10 = %d\n5 = %d\n",note500,note200,note100,note50,note20,note10,note5);
-          
-    
-    break;
-        case 3:
-        if(amount >= 500)
-        {
-        note500 = amount/500;
-        amount = amount - (note500 * 500);
-        }
-          if(amount >= 100)
-        {
-        note100 = amount/100;
-        amount = amount - (note100 * 100);
-        }
-        if(amount >= 50)
-        {
-        note50 = amount/50;
-        amount = amount - (note50 *50);
-        }
-       if(amount >= 10)
-        {
-        note10 = amount/10;
-        amount = amount -(note10*10);
-        }
-       if(amount >= 5)
-        {
-        note5 = amount /5;
-        amount = amount -(note5 *5);
-        }
-       if(amount >=1)
-        {
-        note1 = amount/1;
-        amount = amount -(note1 *1);
-        }
-    printf("DENOMINATION IN JAPAN: \n");
-    printf("500 = %d\n100 = %d\n50 = %d\n10 = %d\n5 = %d\n1 = %d\n",note500,note100,note50,note10,note5,note1);
-    
-    break;
-        case 4:
-        if(amount >= 500)
-        {
-        note500 = amount/500;
-        amount = amount -(note500 * 500);
-        }
-        if(amount >= 200)
-       {
-        note200 = amount/200;
-        amount= amount - (note200 *200);
-       }
-        if(amount >= 100)
-       {
-        note100 = amount/100;
-        amount = amount - (note100 * 100);
-       }
-      if(amount >= 50)
-       {
-        note50 = amount/50;
-        amount = amount - (note50 *50);
-       }
-      if(amount >= 20)
-       {
-        note20 = amount/20;
-        amount = amount -(note20*20);
-       }
-      if(amount >= 10)
-      {
-        note10 = amount /10;
-        amount = amount -(note10 *10);
-      }
-      if(amount >=5)
-      {
-        note5 = amount/5;
-        amount = amount -(note5 *5);
-      }
-      if(amount >= 1)
-        {
-        note1 = amount/1;
-        amount = amount -(note1 * 1);
-        }
-    printf("DENOMINATION IN RIYAL: = \n");
-    printf("500 = %d\n200 = %d\n100 = %d\n50 = %d\n20 = %d\n10 = %d\n5 = %d\n1 = %d\n",note500,note200,note100,note50,note20,note10,note5,note1);
-    break;
-        case 5:
-      if(amount >= 50)
-       {
-        note50 = amount/50;
-        amount = amount - (note50 *50);
-       }
-      if(amount >= 20)
-       {
-        note20 = amount/20;
-        amount = amount -(note20*20);
-       }
-      if(amount >= 10)
-      {
-        note10 = amount /10;
-        amount = amount -(note10 *10);
-      }
-      if(amount >=5)
-      {
-        note5 = amount/5;
-        amount = amount -(note5 *5);
-      }
-    printf("DENOMINATION IN UK: = \n");
-    printf("50 = %d\n20 = %d\n10 = %d\n5= %d\n ",note50,note20,note10,note5);
-    break;
-          case 6:
-        if(amount >= 1000)
-        {
-        note1000 = amount/1000;
-        amount = amount -(note1000 * 1000);
-        }
-        if(amount >= 500)
-        {
-        note500 = amount/500;
-        amount = amount -(note500 * 500);
-        }
-        if(amount >= 200)
-       {
-        note200 = amount/200;
-        amount= amount - (note200 *200);
-       }
-        if(amount >= 100)
-       {
-        note100 = amount/100;
-        amount = amount - (note100 * 100);
-       }
-      if(amount >= 50)
-       {
-        note50 = amount/50;
-        amount = amount - (note50 *50);
-       }
-      if(amount >= 20)
-       {
-        note20 = amount/20;
-        amount = amount -(note20*20);
-       }
-      if(amount >= 10)
-      {
-        note10 = amount /10;
-        amount = amount -(note10 *10);
-      }
-      if(amount >=5)
-      {
-        note5 = amount/5;
-        amount = amount -(note5 *5);
-      }
-      if(amount >= 2)
-        {
-        note2 = amount/2;
-        amount = amount -(note2 * 2);
-        }
-    printf("DENOMINATION IN TAKKA: = \n");
-    printf("1000 = %d\n500 = %d\n200 = %d\n100 = %d\n 50 = %d\n20 = %d\n10 = %d\n5 = %d\n2 = %d\n",note1000,note500,note200,note100,note50,note20,note10,note5,note2);
-    break;
-          
-          case 7:
-        if(amount >= 1000)
-        {
-        note1000 = amount/1000;
-        amount = amount -(note1000 * 1000);
-        }
-        if(amount >= 500)
-        {
-        note500 = amount/500;
-        amount = amount -(note500 * 500);
-        }
-        if(amount >= 200)
-       {
-        note200 = amount/200;
-        amount= amount - (note200 *200);
-       }
-        if(amount >= 100)
-       {
-        note100 = amount/100;
-        amount = amount - (note100 * 100);
-       }
-      if(amount >= 50)
-       {
-        note50 = amount/50;
-        amount = amount - (note50 *50);
-       }
-      if(amount >= 20)
-       {
-        note20 = amount/20;
-        amount = amount -(note20*20);
-       }
-    printf("DENOMINATION IN PESO: = \n");
-    printf("1000 = %d\n500 = %d\n200 = %d\n100 = %d\n50 = %d\n20 = %d\n",note1000,note500,note200,note100,note50,note20);
-    break;
-          case 8:
-        if(amount >= 5000)
-        {
-        note5000 = amount/5000;
-        amount = amount -(note5000 * 5000);
-        }
-        if(amount >= 1000)
-        {
-        note1000 = amount/1000;
-        amount = amount -(note1000 * 1000);
-        }
-        if(amount >= 500)
-        {
-        note500 = amount/500;
-        amount = amount -(note500 * 500);
-        }
-        if(amount >= 100)
-       {
-        note100 = amount/100;
-        amount = amount - (note100 * 100);
-       }
-      if(amount >= 50)
-       {
-        note50 = amount/50;
-        amount = amount - (note50 *50);
-       }
-      if(amount >= 10)
-       {
-        note10 = amount/10;
-        amount = amount -(note10*10);
-       }
-      if(amount >=5)
-      {
-        note5 = amount/5;
-        amount = amount -(note5 *5);
-      }
-    printf("DENOMINATION IN RUBLE: = \n");
-    printf("5000 = %d\n1000 = %d\n500 = %d\n100 = %d\n  50 = %d\n10 = %d\n5 = %d\n",note5000,note1000,note500,note100,note50,note10,note5);
-    break;
-          case 9:
-          if(amount >= 1000)
-        {
-        note1000 = amount/1000;
-        amount = amount -(note1000 * 1000);
-        }
-       if(amount >= 500)
-       {
-        note500 = amount/500;
-        amount = amount- (note500 * 500);
-       }
-       if(amount >= 100)
-       {
-        note100 = amount/100;
-        amount = amount - (note100 * 100);
-       }
-      if(amount >= 50)
-       {
-        note50 = amount/50;
-        amount = amount - (note50 *50);
-       }
-      if(amount >= 20)
-       {
-        note20 = amount/20;
-        amount = amount -(note20*20);
-       }
-      if(amount >= 10)
-      {
-        note10 = amount/10;
-        amount = amount -(note10 *10);
-      }
-      if(amount >=5)
-      {
-        note5 = amount/5;
-        amount = amount -(note5 *5);
-      }
-     if(amount >=2)
-      {
-        note2 = amount/2;
-        amount = amount - (note2 *2);
-      }
-      if(amount >=1)
-     {
-        note5 = amount/1;
-        amount = amount - (note1 *1);
-     }
-    printf(" 1000 = %d\n500 = %d\n100 = %d\n50 = %d\n  20 = %d\n10 = %d\n5 = %d\n2 = %d\n1 = %d\n",note1000,note500,note100,note50,note20,note10,note5,note2,note1);
-          case 10:
-        if(amount >= 500000)
-        {
-        note500000 = amount/500000;
-        amount = amount -(note500000 * 500000);
-        }
-        if(amount >= 200000)
-        {
-        note200000 = amount/200000;
-        amount = amount -(note200000 * 200000);
-        }
-        if(amount >= 100000)
-        {
-        note100000 = amount/100000;
-        amount = amount -(note100000 * 100000);
-        }
-          if(amount >= 50000)
-        {
-        note5000 = amount/50000;
-        amount = amount -(note1000 * 50000);
-        }
-        if(amount >= 20000)
-        {
-        note20000 = amount/20000;
-        amount = amount -(note20000 * 20000);
-        }
-        if(amount >= 10000)
-        {
-        note10000 = amount/10000;
-        amount = amount -(note10000 * 10000);
-        }
-        if(amount >= 5000)
-        {
-        note5000 = amount/5000;
-        amount = amount -(note5000 * 5000);
-        }
-        if(amount >= 2000)
-        {
-        note2000 = amount/2000;
-        amount = amount -(note2000 * 2000);
-        }
-        if(amount >= 1000)
-        {
-        note1000 = amount/1000;
-        amount = amount -(note1000 * 1000);
-        }
-       if(amount >= 500)
-       {
-        note500 = amount/500;
-        amount = amount- (note500 * 500);
-       }
-       if(amount >= 200)
-       {
-        note200 = amount/200;
-        amount= amount - (note200 *200);
-       }
-      if(amount >= 100)
-       {
-        note100 = amount/100;
-        amount = amount - (note100 * 100);
-       }
-      
-    printf("500000 = %d\n200000 = %d\n100000 = %d\n 50000 = %d\n20000 = %d\n10000 = %d\n5000 = %d\n2000 = %d\n1000 = %d\n500 = %d\n200 = %d\n100 = %d\n ",note500000,note200000,note100000,note50000,note20000,note10000,note5000,note2000,note1000,note500,note200,note100);
-        }
+        case 1:;
+        int a[7]={100,50,20,10,5,2,1};
+        printf("Enter the amount:");
+        scanf("%d",&amount);
+        printf("DENOMINATION IN USA:\n");
+        A(a,&amount);
+        break;
+        case 2:;
+        int b[7]={500,200,100,50,20,10,5};
+        printf("Enter the amount:");
+        scanf("%d",&amount);
+        printf("DENOMINATION IN EURO:\n");
+        B(b,&amount);
+        break;
+        case 3:;
+        int c[6]={500,100,50,10,5,1};
+        printf("Enter the amount:");
+        scanf("%d",&amount);
+        printf("DENOMINATION IN JAPAN:\n");
+        C(c,&amount);
+        break;
+        case 4:;
+        int d[8]={500,200,100,50,20,10,5,1};
+        printf("Enter the amount:");
+        scanf("%d",&amount);
+        printf("DENOMINATION IN RIYAL:\n");
+        D(d,&amount);
+        break;
+        case 5:;
+        int e[4]={50,20,10,5};
+        printf("Enter the amount:");
+        scanf("%d",&amount);
+        printf("DENOMINATION IN Uk:\n");
+        E(e,&amount);
+        break;
+        case 6:;
+        int f[9]={1000,500,200,100,50,20,10,5,2};
+        printf("Enter the amount:");
+        scanf("%d",&amount);
+        printf("DENOMINATION IN TAKKA:\n");
+        F(f,&amount);
+        break;
+        case 7:;
+        int g[6]={1000,500,200,100,50,20};
+        printf("Enter the amount:");
+        scanf("%d",&amount);
+        printf("DENOMINATION IN PESO:\n");
+        G(g,&amount);
+        break;
+        case 8:;
+        int h[7]={5000,1000,500,100,50,10,5};
+        printf("Enter the amount:");
+        scanf("%d",&amount);
+        printf("DENOMINATION IN RUBLE:\n");
+        H(h,&amount);
+        break;
+        case 9:;
+        int j[9]={1000,500,100,50,20,10,5,2,1};
+        printf("Enter the amount:");
+        scanf("%d",&amount);
+        printf("DENOMINATION IN BAHT:\n");
+        J(j,&amount);
+        break;
+        case 10:;
+        int k[12]={500000,200000,100000,50000,20000,10000,5000,2000,1000,500,200,100};
+        printf("Enter the amount:");
+        scanf("%d",&amount);
+        printf("DENOMINATION IN DONG:\n");
+        K(k,&amount);
+        break;
     }
+    }
+void A(int *a,int *amount)
+{
+    int temp,i;
+    temp=*amount;
+    for(i=0;i<7;i++)
+    {
+     
+     printf("\n%d notes is:%d",*(a+i),temp/(*(a+i)));
+     temp=temp%a[i];
+     	
+    } 
+}
+void B(int *b,int *amount)
+{
+    int temp,i;
+    temp=*amount;
+    for(i=0;i<7;i++)
+    {
+     
+     printf("\n%d notes is:%d",*(b+i),temp/(*(b+i)));
+     temp=temp%b[i];
+     	
+    } 
+}
+void C(int *c,int *amount)
+{
+    int temp,i;
+    temp=*amount;
+    for(i=0;i<6;i++)
+    {
+     
+     printf("\n%d notes is:%d",*(c+i),temp/(*(c+i)));
+     temp=temp%c[i];
+     	
+    } 
+}
+void D(int *d,int *amount)
+{
+    int temp,i;
+    temp=*amount;
+    for(i=0;i<8;i++)
+    {
+     
+     printf("\n%d notes is:%d",*(d+i),temp/(*(d+i)));
+     temp=temp%d[i];
+     	
+    } 
+}
+void E(int *e,int *amount)
+{
+    int temp,i;
+    temp=*amount;
+    for(i=0;i<4;i++)
+    {
+     
+     printf("\n%d notes is:%d",*(e+i),temp/(*(e+i)));
+     temp=temp%e[i];
+     	
+    } 
+}
+void F(int *f,int *amount)
+{
+    int temp,i;
+    temp=*amount;
+    for(i=0;i<9;i++)
+    {
+     
+     printf("\n%d notes is:%d",*(f+i),temp/(*(f+i)));
+     temp=temp%f[i];
+     	
+    } 
+}
+void G(int *g,int *amount)
+{
+    int temp,i;
+    temp=*amount;
+    for(i=0;i<6;i++)
+    {
+     
+     printf("\n%d notes is:%d",*(g+i),temp/(*(g+i)));
+     temp=temp%g[i];
+     	
+    } 
+}
+void H(int *h,int *amount)
+{
+    int temp,i;
+    temp=*amount;
+    for(i=0;i<7;i++)
+    {
+     
+     printf("\n%d notes is:%d",*(h+i),temp/(*(h+i)));
+     temp=temp%h[i];
+     	
+    } 
+}
+void J(int *j,int *amount)
+{
+    int temp,i;
+    temp=*amount;
+    for(i=0;i<9;i++)
+    {
+     
+     printf("\n%d notes is:%d",*(j+i),temp/(*(j+i)));
+     temp=temp%j[i];
+     	
+    } 
+}
+void K(int *k,int *amount)
+{
+    int temp,i;
+    temp=*amount;
+    for(i=0;i<12;i++)
+    {
+     
+     printf("\n%d notes is:%d",*(k+i),temp/(*(k+i)));
+     temp=temp%k[i];
+     	
+    } 
+}
     
