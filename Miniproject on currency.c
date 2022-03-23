@@ -17,7 +17,7 @@ void J(int *j,int *amount);
 void K(int *k,int *amount);
 int main()
 {
-  int num,n,exit,choice;
+  int num,n,choice;
   int symbol;
   float total;
   char ch[20];
@@ -30,8 +30,6 @@ int main()
     "\n4.DENOMINATION CALCULATOR");
   printf("\n\nENTER YOUR CHOICE\n");
   scanf("%d",&choice);
-  while(exit!=1)
- {
   switch(choice)
   {
   case 1:
@@ -47,11 +45,6 @@ int main()
   Denomination();
   break;
  }
-    
-      printf("\n......................");
-      printf("\n\n\t press 1 to exit and 2 to continue (yes=1/no=2):");
-      scanf("%d",&exit);
-      }
 }
 void Explore()
 {
